@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>铃芽之旅</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body style="background-color: bisque;">
+    <div>
+        <span>当前时间：</span>
+        <span id="time"></span>
+    </div>     
+    <div id="titleBG" class="day"  style="width: 100%;">
+        <h1 id="title" style="width: 100%;">铃芽之旅背景介绍</h1>
+    </div>
+    <!-- 这里的标题框会根据白天或晚上变换样式 -->
+    <script src = "./time.js"> </script>
+    <br>
+    <div>
+        <canvas id="tlt1">你的浏览器居然不支持Canvas？！赶快换一个吧！！</canvas>
+    </div>
+    <script src="./tlt1.js"></script>
+    <br>
+    <div id="introduce">
+        <img src="./image/poster.png" alt="_blank" width="400">
+        <p class="itd">&nbsp;&nbsp;&nbsp;&nbsp;《铃芽之旅》（日语：すずめの戸締まり）是新海诚执导和编剧、Comix Wave Films制作的一部动画电影，于2022年11月11日在日本上映。并有小说等衍生作品。<br>&nbsp;&nbsp;&nbsp;&nbsp;这是一部以日本各地的废墟为舞台的公路电影。描写了在关上一扇扇“灾祸之门”的旅途中，少女铃芽的解放和成长。未曾见过的风景。邂逅与分离。惊奇与困难。哪怕苦难重重也不曾放弃勇敢向前的铃芽，为在日常生活中或许同样处在迷茫和不安中的我们，照进一束光。 这是一个连接了过去、现在与将来的，关于“户缔（戸締まり）”的故事。 这一路的风景，将永远铭刻于心。</p>
+    </div>
+    <br>
+    <div>
+        <canvas id="tlt2">你的浏览器居然不支持Canvas？！赶快换一个吧！！</canvas>
+    </div>
+    <script src="./tlt2.js"></script>
+    <br><br>
+    <div id="map">
+        <svg width="600" height="485">
+            <g style="fill:red">
+                <circle cx="42" cy="480" r="3" />
+                <circle cx="108" cy="353" r="3" />
+                <circle cx="212" cy="308" r="3" />
+                <circle cx="423" cy="251" r="3.4" />
+                <circle cx="502" cy="75" r="3" />
+            </g>
+            <g style="stroke-width:2;fill:none;stroke:red;">
+                <path d="M42 480 Q50 400 108 353"/>
+                <path d="M108 353 Q129 357 152 343"/>
+                <path d="M152 343 Q170 330 212 308"/>
+                <path d="M212 308 Q340 255 423 251"/>
+                <path d="M423 251 Q480 200 472 105"/>
+                <path d="M472 105 Q500 85 502 75"/>
+            </g>
+            <text x="20" y="90" style="font-family: '幼圆'; font-size: 42px; font-weight:bold;">铃芽的旅行线路图</text>
+            <g style="font-family: '楷体'; font-size: 20px;fill:rgb(228, 43, 191); font-weight:bold;">
+               <text x="50" y="480">日高市</text>
+               <text x="65" y="350">爱媛</text>
+               <text x="170" y="308">神户</text>
+               <text x="430" y="260">东京</text>
+               <text x="502" y="70">大谷海岸</text>
+            </g>       
+        </svg>
+    </div>
+    <br>
+    <div>
+        <canvas id="tlt3">你的浏览器居然不支持Canvas？！赶快换一个吧！！</canvas>
+    </div>
+    <script src="./tlt3.js"></script>
+    <br>
+    <div>
+        <p>&nbsp;&nbsp;这应该是新海诚的精心安排。铃芽的停留之处基本都发生过重大地震灾害。</p>
+        <ol>
+            <li>九州：2016年曾经发生过熊本大地震，包括6.2级的前震、7.0级的主震以及800多次余震，其中前震和主震都达到了最高级别的7级震度，电影中出现的宫崎、爱媛也受到了不小影响。<span class="ps">（也有说法，选择爱媛是因为在2014年发生了里氏6.2级的3·14日本伊予滩地震，但是该地震的最大震度仅为5强，而且爱媛县虽然临近震中但是受灾轻微，故本文未采用该说法）</span></li>
+            <br>
+            <li>神户：1995年在神户发生了里氏7.3级地震，后来被称为阪神大地震、神户大地震<span class="ps">（日文：阪神・淡路大震災）</span>。对神户、大阪造成了近乎毁灭性的打击。</li>
+            <br>
+            <li>东京：1923年曾经发生里氏7.9级<span class="ps">(或8.1级)</span>的关东大地震<span class="ps">（日文：関東大震災）</span>，东京、横滨等地受灾严重，数十万人死亡，是进百年来日本遭受的最严重的地震灾害之一。原作小说中也有此描述：<p class="ps">「东京的要石所在的地点，据说有巨大的后门。东京的后门一百年前曾经开启过一次，在关东一带引起很大的灾害，后来由当时的关门师们关起来。也许──」</p></li>
+            <br>
+            <li>福岛、岩手、宫城：2011年3月11日曾经发生里氏9.0级的特大地震，后称为3·11日本地震或东日本大地震<span class="ps">（日文：東北地方太平洋沖地震 、東日本大震災）</span>。地震和接连不断的余震引发了海啸，最高达到23米，还引发了福岛第一核电站泄漏事件，造成了数千人死亡。</li>
+        </ol>
+    </div>
+    <br>
+    <div>
+        <p class="cmt">&nbsp;&nbsp;&nbsp;&nbsp;了解更多详细内容，请点击下方链接进入我的Bilibili专栏：</p>
+        <div class="Link">
+            <a href="https://www.bilibili.com/read/cv22872635" target="view_window">新海诚新作《铃芽之旅》全面详细分析（内含对主题曲《すずめ》深入剖析）</a>
+        </div>
+    </div>
+</body>
+</html>

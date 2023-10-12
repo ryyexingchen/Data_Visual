@@ -1,0 +1,53 @@
+#title{
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin:0 0 10px 0;
+    padding:15px;
+}
+.day{
+    background-color:#66ccff;
+    color: #000;
+}
+.night{
+    background-color:#0a025e;
+    color:#fff;
+}
+#map{
+    background-image: url("./image/map.png");
+    width: 600px;
+    height: 485px;
+    background-size:600px;
+    margin:0 auto;
+}
+#introduce {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+div img {
+    width: 50%;
+    margin-right: 20px;
+}
+.itd{
+    font-family: 幼圆;
+    font-size: 20px;
+    width: 50%;
+    overflow: hidden;
+}
+a{
+    color: #666;
+    font:700 20px 微软雅黑;
+    text-decoration:none;
+}
+.cmt{
+    color: #000;
+    font:700 24px 微软雅黑;
+}
+.Link{
+    text-align: center;
+}
+.ps{
+    font-size:14px;
+    color:#666;
+}
