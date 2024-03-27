@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Map</title>
+  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+  <br><br>
+  <h1 style="text-align: center;font-size: 5em;">日本地震分析</h1>
+  <div class="navbar">  
+    <a href="#app">地震次数的年份分布</a>  
+    <a href="#chart">不同地震震级、震源深度与震度之间的关系</a>  
+    <a href="#map-container">地震震源、震度时间分布动画</a>
+    <a href="#eq">震度分布图与震中距、实测震度和方位的关系</a>
+  </div>
+  <div class="content">
+    <h1>地震次数的年份分布</h1>
+  <div id="app">
+    <div>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 选择震度：</span>
+      <span id="filter-dropdown">
+      </select>
+      </span>
+    </div>
+    <svg id="bin" class="picture"></svg>
+  </div>
+  <h1>不同地震震级、震源深度与震度之间的关系</h1>
+  <div>
+    <svg id="chart" class="picture"></svg>
+  </div>
+  <h1>日本自2000年以来的地震震源、震度时间分布动画</h1>  
+  <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span>
+      <button id="restart">重新开始</button>
+      &nbsp;&nbsp;&nbsp;
+      <button id="stop">暂停</button>
+      &nbsp;&nbsp;&nbsp;
+      <button id="continue">继续</button>
+    </span> 
+  </div>
+  <br>
+  <div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <svg id="map-container" class="picture"></svg>
+  </div>
+  <h1>震度分布图与观测到震度5-及以上的观测点的震中距、实测震度和方位的关系</h1>  
+  <div>
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;请选择要查看的地震：</span>
+    <select name="eq" id="eq">
+        <option value="2004" >2004年新潟中越地震</option>
+        <option value="2011" selected>2011年东日本大地震</option>
+        <option value="2016_1" >2016年熊本地震前震</option>
+        <option value="2016_2" >2016年熊本地震主震</option>
+        <option value="2018" >2018年胆振地方中东部地震</option>
+        <option value="2023" >2023年石川县能登地方地震</option>
+    </select>
+</div>
+<br>
+<div id="2004">
+  <p>发生于2004年10月23日的新潟中越地震</p>
+  <div class="message">
+    <table
+      width="50%"
+      border="0"
+      cellspacing="2"
+      bgcolor="#cccccc"
+      class="tabtop"
+      align="center"
+    >
+      <tr>
+        <td class="btbg2 font-center">日期</td>
+        <td class="font-center">2004年10月23日</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">具体时间</td>
+        <td class="font-center">17时56分0.3秒</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">地点</td>
+        <td class="font-center">新潟県中越地方</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">经度</td>
+        <td class="font-center">138°52′E</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">纬度</td>
+        <td class="font-center">37°17.5′N</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">深度</td>
+        <td class="font-center">13km</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">震级</td>
+        <td class="font-center">M6.8</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">最大烈度</td>
+        <td class="font-center">7</td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <svg id="map-container2004"></svg>
+  <svg id="chart2004"></svg>
+</div>
+<div id="2011">
+  <p>发生于2011年3月11日的东日本大地震</p>
+  <div class="message">
+    <div class="message">
+    <table
+      width="50%"
+      border="0"
+      cellspacing="2"
+      bgcolor="#cccccc"
+      class="tabtop"
+      align="center"
+    >
+      <tr>
+        <td class="btbg2 font-center">日期</td>
+        <td class="font-center">2011年3月11日</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">具体时间</td>
+        <td class="font-center">14时46分18.1秒</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">地点</td>
+        <td class="font-center">三陸沖</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">经度</td>
+        <td class="font-center">142°51.6′E</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">纬度</td>
+        <td class="font-center">38°6.2′N</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">深度</td>
+        <td class="font-center">24km</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">震级</td>
+        <td class="font-center">M9.0</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">最大烈度</td>
+        <td class="font-center">7</td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  </div>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <svg id="map-container2011"></svg>
+  <svg id="chart2011"></svg>
+</div>
+<div id="2016_1">
+  <p>发生于2016年4月14日的熊本地震前震</p>
+  <div class="message">
+    <table
+      width="50%"
+      border="0"
+      cellspacing="2"
+      bgcolor="#cccccc"
+      class="tabtop"
+      align="center"
+    >
+      <tr>
+        <td class="btbg2 font-center">日期</td>
+        <td class="font-center">2016年4月14日</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">具体时间</td>
+        <td class="font-center">21时26分34.4秒</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">地点</td>
+        <td class="font-center">熊本県熊本地方</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">经度</td>
+        <td class="font-center">130°48.5′E</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">纬度</td>
+        <td class="font-center">32°44.5′N</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">深度</td>
+        <td class="font-center">11km</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">震级</td>
+        <td class="font-center">M6.5</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">最大烈度</td>
+        <td class="font-center">7</td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <svg id="map-container2016_1"></svg>
+  <svg id="chart2016_1"></svg>
+</div>
+<div id="2016_2">
+  <p>发生于2016年4月16日的熊本地震主震</p>
+  <div class="message">
+    <table
+      width="50%"
+      border="0"
+      cellspacing="2"
+      bgcolor="#cccccc"
+      class="tabtop"
+      align="center"
+    >
+      <tr>
+        <td class="btbg2 font-center">日期</td>
+        <td class="font-center">2016年4月16日</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">具体时间</td>
+        <td class="font-center">1时25分5.4秒</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">地点</td>
+        <td class="font-center">熊本県熊本地方</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">经度</td>
+        <td class="font-center">130°45.7′E</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">纬度</td>
+        <td class="font-center">32°45.2′N</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">深度</td>
+        <td class="font-center">12km</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">震级</td>
+        <td class="font-center">M7.3</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">最大烈度</td>
+        <td class="font-center">7</td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <svg id="map-container2016_2"></svg>
+  <svg id="chart2016_2"></svg>
+</div>
+<div id="2018">
+  <p>发生于2018年9月6日的胆振地方中东部地震</p>
+  <div class="message">
+            <table
+      width="50%"
+      border="0"
+      cellspacing="2"
+      bgcolor="#cccccc"
+      class="tabtop"
+      align="center"
+    >
+      <tr>
+        <td class="btbg2 font-center">日期</td>
+        <td class="font-center">2018年9月6日</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">具体时间</td>
+        <td class="font-center">3时7分59.3秒</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">地点</td>
+        <td class="font-center">胆振地方中東部</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">经度</td>
+        <td class="font-center">142°0.4′E</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">纬度</td>
+        <td class="font-center">42°41.4′N</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">深度</td>
+        <td class="font-center">37km</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">震级</td>
+        <td class="font-center">M6.7</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">最大烈度</td>
+        <td class="font-center">7</td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <svg id="map-container2018"></svg>
+  <svg id="chart2018"></svg>
+</div>
+<div id="2023">
+  <p>
+    发生于2023年5月5日的石川县能登地方地震（由于观测点震度数据太少，故不展示观测点震度方位图）
+  </p>
+  <div class="message">
+    <table
+      width="50%"
+      border="0"
+      cellspacing="2"
+      bgcolor="#cccccc"
+      class="tabtop"
+      align="center"
+    >
+      <tr>
+        <td class="btbg2 font-center">日期</td>
+        <td class="font-center">2023年5月5日</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">具体时间</td>
+        <td class="font-center">14时42分4.1秒 </td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">地点</td>
+        <td class="font-center">能登半島沖</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">经度</td>
+        <td class="font-center">137°18.2′E</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">纬度</td>
+        <td class="font-center">37°32.3′N</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">深度</td>
+        <td class="font-center">12km</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">震级</td>
+        <td class="font-center">M6.5</td>
+      </tr>
+      <tr>
+        <td class="btbg2 font-center">最大烈度</td>
+        <td class="font-center">6+</td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <svg id="map-container2023"></svg>
+</div>
+  <script src="./menu_control.js"></script>
+  <script src="mainBin.js"></script>
+  <script src="./mainBubble.js"></script>
+  <script src="map_anime.js"></script>
+  <script src="main.js"></script>
+  <script src="./mainChart.js"></script>
+  </div>
+</body>
+</html>
